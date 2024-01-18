@@ -81,7 +81,7 @@ int main() {
         scanf(" %c", &choice);
 
         if(choice == 's' || choice == 'S'){
-            playerHand[numPlayerCards] = deck[numPlayerCards];
+            playerHand[numPlayerCards] = deck[numPlayerCards + 1];
             playerSum = sumHand(playerHand, ++numPlayerCards);
 
             printf("Nueva carta:\n");
