@@ -27,7 +27,7 @@ void initializeDeck() { //Create the deck with all the card combinations (in ord
     for(int i = 0; i < TOTAL_CARDS; i++) {
         deck[i].value = values[i % CARD_VALUES]; //4
         deck[i].suit = suits[i / CARD_VALUES]; // hearts
-        deck[i].numericValue = (i % CARD_VALUES) + 1;
+        deck[i].numericValue = (i % CARD_VALUES) + 2;
         if(deck[i].numericValue > 10){
             deck[i].numericValue = 10;
         }
@@ -53,14 +53,9 @@ void showCard(struct card c){ //Show the cards to the user.
 
 int sumHand(struct card hand[], int numCards) {//Add the user's cards.
     int sum = 0;
-    /*for (int i = 0; i < numCards; i++){
+    for (int i = 0; i < numCards; i++){
         sum += hand[i].numericValue;
-    }*/
-    int i = 1;
-    do{
-        sum += hand[i].numericValue;
-        i++;
-    }while(i < numCards);
+    }
     return sum;
 }
 
